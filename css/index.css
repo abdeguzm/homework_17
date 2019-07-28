@@ -1,0 +1,244 @@
+/* Fonts */
+.h1, h2, h3{
+    font-family: 'Nunito', sans-serif;
+}
+
+.p, li{
+    font-family: 'Noticia Text', serif;
+}
+
+/* Grid */
+.grid{
+    display: grid;
+    grid-template-rows: 50px 350px 350px 300px 300px 300px 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "picture picture name name name"
+    "picture picture intro intro intro"
+    "picture picture more more more"
+    "project_pic1 project1 project1 project1 project1"
+    "project2 project2 project2 project2 project_pic2"
+    "project_pic3 project3 project3 project3 project3"
+    "insta insta insta insta insta";
+}
+
+.picture{
+    grid-area: picture;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name{
+    grid-area:name;
+    text-align: right;
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+}
+
+.intro{
+    grid-area: intro;
+    margin: auto;
+    font-family: 'Noticia Text', serif;
+}
+
+.more{
+    grid-area: more;
+}
+
+.project_pic1{
+    grid-area: project_pic1;
+    font-family: 'Nunito', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+}
+
+.project1{
+    grid-area: project1;
+    padding-top: 75px;
+    font-family: 'Noticia Text', serif;
+    
+}
+
+.project_pic2{
+    grid-area: project_pic2;
+}
+
+.project2{
+    grid-area: project2;
+    text-align: right;
+    padding: 10px;
+    font-family: 'Noticia Text', serif;
+    padding-top: 75px;
+}
+
+.project_pic3{
+    grid-area: project_pic3;
+}
+
+.project3{
+    grid-area: project3;
+    font-family: 'Noticia Text', serif;
+}
+
+.insta{
+    grid-area: insta;
+}
+
+.pic_grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "pic1 pic2 pic3 pic4"
+    "pic5 pic6 pic7 pic8";
+    padding-left: 125px;
+}
+
+.pic1{
+    grid-area: pic1;
+}
+
+.pic2{
+    grid-area: pic2;
+}
+
+.pic3{
+    grid-area: pic3;
+}
+
+.pic4{
+    grid-area: pic4;
+}
+
+.pic5{
+    grid-area: pic5;
+}
+
+.pic6{
+    grid-area: pic6;
+}
+
+.pic7{
+    grid-area: pic7;
+}
+
+.pic8{
+    grid-area: pic8;
+}
+
+/* Background */
+.bg_color{
+    background: lightgray;
+    border-radius: 25px;
+}
+
+/* Sizing & Alignment */
+#pic_size{
+    height: 600px;
+}
+
+#mobile_pic{
+    display: none;
+}
+
+.linkedin{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#finger{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: bounceArrow .7s infinite;
+}
+
+.insta_title{
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Animations */
+
+@keyframes bounceArrow {
+    from {
+      margin-top: 0px;
+    }
+    50% {
+      margin-top: 7px;
+    }
+    to {
+      margin-top: 0px;
+    }
+  }
+
+  /* Flex */
+.flexItem{
+    background-color: #002366;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+  }
+.flexContainer{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+.justifyContent{
+    justify-content: space-evenly;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 500px) {
+    .grid {
+      display: grid;
+      grid-template-rows:425px 50px 350px 350px 400px 300px 300px 1fr;
+      grid-template-columns:500px;
+      grid-template-areas:
+      "picture"
+      "name"
+      "intro"
+      "more"
+      "project_pic1"
+      "project_pic2"
+      "project_pic3" 
+      "insta"
+      ;
+    }
+
+    .project1, .project2, .project3{
+        display: none;
+    }
+
+    #pic_size{
+        display: none;
+    }
+
+    #mobile_pic{
+        display: block;
+    }
+
+    .name{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .pic_grid{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "pic1 pic2" 
+        "pic3 pic4"
+        "pic5 pic6" 
+        "pic7 pic8";
+        padding-left: 0px;
+    }
+  }
+
+  /* grid-template-rows:350px 50px 350px 350px 300px 300px 300px 1fr; */
